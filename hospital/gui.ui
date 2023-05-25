@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Hospital</class>
+ <widget class="QMainWindow" name="Hospital">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1110</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="diagnosis_tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1221</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="patient_tab">
+     <attribute name="title">
+      <string>Пацієнт</string>
+     </attribute>
+     <widget class="QGroupBox" name="patient_insert">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Управління</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>201</width>
+         <height>215</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Прізвище</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="patient_last_name_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Ім'я</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="patient_first_name_line">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>По батькові</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Дата народження</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="patient_date_of_birth_dateEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Стать</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="patient_gender_comboBox">
+            <item>
+             <property name="text">
+              <string>Чоловіча</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Жіноча</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Відділення</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="patient_department_number_comboBox"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Діагноз</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="patient_patients_diagnosis_comboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>201</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="patient_btn_add">
+          <property name="text">
+           <string>Додати</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="patient_btn_delete">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_refresh">
+          <property name="text">
+           <string>Оновити дані таблиці</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>861</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Перегляд</string>
+      </property>
+      <widget class="QTableWidget" name="patient_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>821</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Прізвище</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ім'я</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>По батькові</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Дата народження</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Стать</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Відділення</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Діагноз</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="department_tab">
+     <attribute name="title">
+      <string>Відділення</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>771</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Перегляд</string>
+      </property>
+      <widget class="QTableWidget" name="department_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>731</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Кількість лікарів</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Кількість пацієнтів</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="patient_insert_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Управління</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>201</width>
+         <height>215</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Назва</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="department_name_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Кількість лікарів</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="department_number_of_doctors_spinBox"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Кількість пацієнтів</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="department_number_of_patients_spinBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>201</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="department_btn_add">
+          <property name="text">
+           <string>Додати</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="department_btn_delete">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="department_btn_refresh">
+          <property name="text">
+           <string>Оновити дані таблиці</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="doctor_tab">
+     <attribute name="title">
+      <string>Лікар</string>
+     </attribute>
+     <widget class="QGroupBox" name="patient_insert_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Управління</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>201</width>
+         <height>215</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Прізвище</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="doctor_last_name_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Ім'я</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="doctor_first_name_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>По батькові</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="doctor_middle_name_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>Спеціальність</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="doctor_specialty_line">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Відділення</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="doctor_department_number_comboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>201</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QPushButton" name="doctor_btn_add">
+          <property name="text">
+           <string>Додати</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="doctor_btn_delete">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="doctor_btn_refresh">
+          <property name="text">
+           <string>Оновити дані таблиці</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>771</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Перегляд</string>
+      </property>
+      <widget class="QTableWidget" name="doctor_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>731</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Призвіще</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ім'я</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>По батькові</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Спеціальність</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Відділення</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="treatment_tab">
+     <attribute name="title">
+      <string>Лікування</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>771</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Перегляд</string>
+      </property>
+      <widget class="QTableWidget" name="treatment_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>731</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Дата находження</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Відділення</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Пацієнт</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Лікар</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Діагноз</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="patient_insert_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Управління</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>201</width>
+         <height>215</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Дата находження</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="treatment_date_of_admission_dateEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Відділення</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="treatment_department_number_comboBox"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Пацієнт</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="treatment_patient_comboBox"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Лікар</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="treatment_doctor_comboBox"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>Діагноз</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="treatment_diagnosis_comboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>201</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QPushButton" name="treatment_btn_add">
+          <property name="text">
+           <string>Додати</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="treatment_btn_delete">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="treatment_btn_refresh">
+          <property name="text">
+           <string>Оновити дані таблиці</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="diagnosis_tab">
+     <attribute name="title">
+      <string>Діагноз</string>
+     </attribute>
+     <widget class="QGroupBox" name="patient_insert_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Управління</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>201</width>
+         <height>215</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_21">
+          <item>
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>Назва</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="diagnosis_name_lineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_24"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_25">
+          <item>
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>Опис</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="diagnosis_description_textEdit"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>201</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QPushButton" name="diagnosis_btn_add">
+          <property name="text">
+           <string>Додати</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="diagnosis_btn_delete">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="diagnosis_btn_refresh">
+          <property name="text">
+           <string>Оновити дані таблиці</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>771</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Перегляд</string>
+      </property>
+      <widget class="QTableWidget" name="diagnosis_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>731</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Опис</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1110</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
